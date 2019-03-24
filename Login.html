@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <title>微博登录</title>
+    <link rel="stylesheet" href="lib/bootstrap/css/bootstrap.css">
+    <style>
+        html,body{padding:0;margin: 0}
+        body{background: url("image/bg.jpg") no-repeat;background-size: cover;}
+        .brand{font-size: 25px;font-weight: bolder;;font-style: italic;color: white;
+        position: absolute;top:50px;left:100px}
+        .icon_brand{font-size: 35px;}
+        .tab-content{ border:1px solid rgb(221, 221, 221);border-top:none;
+            border-radius: 0 0 5px 5px ;padding: 50px;background: white  }
+        #form_login{font-size: 20px;text-align: center;background: #e7e7e7}
+        .checkError{width:220px;height:30px;position: absolute;top:100px;right:-195px;border-radius:8px ;
+            background:#00ccff;color:red;text-align: center;line-height: 30px;font-weight: bolder;
+            z-index: 50;  opacity:0;}
+        #check_two{top:148px}
+        #check_three{top:196px}
+        #check_four{top:244px}
+        .small_corner {height:13px;width:13px;position: absolute;top:108px;right:18px;
+            transform: rotate(45deg);background:#00ccff;opacity:0;}
+        #corner_two{top:156px}
+        #corner_three{top:204px}
+        #corner_four{top:252px}
+        .showError{animation: 0.5s showIn;-webkit-animation: 0.35s showIn;
+            -webkit-animation-fill-mode: forwards; animation-fill-mode: forwards; }
+        @keyframes showIn {
+            from{opacity: 0;right:-205px}
+            to{opacity: 1;right:-195px;}
+        }
+        @-webkit-keyframes showIn {
+            from{opacity: 0;right:-205px}
+            to{opacity: 1;right:-195px;}
+        }
+        .showCorner{animation: 0.5s fadeIn;-webkit-animation: 0.35s fadeIn;
+            -webkit-animation-fill-mode: forwards; animation-fill-mode: forwards; }
+        @keyframes fadeIn {
+            from{opacity: 0;right:8px}
+            to{opacity: 1;right:18px;}
+        }
+        @-webkit-keyframes fadeIn {
+            from{opacity: 0;right:8px}
+            to{opacity: 1;right:18px;}
+        }
+    </style>
+</head>
+<body>
+<div class="navbar-brand brand"><span class="glyphicon glyphicon-globe icon_brand"></span>Personal微博</div>
+<div class="form_check" style="margin: 180px auto;width: 350px;position: relative">
+    <ul class="nav nav-tabs nav-tabs-justified" id="form_login">
+        <li style="width: 175px" class="active"><a href="#a" data-toggle="tab">登录</a></li>
+        <li style="width: 175px"><a href="#b" class="dropdown-toggle" data-toggle="tab">注册</a></li>
+    </ul>
+    <ul class="tab-content" >
+        <li id="a" class="tab-pane active fade in">
+            <form class="form-horizontal"  action="Home.html">
+                <div class="form-group">
+                    <input type="text" class="form-control" id="user_phone" placeholder="输入用户名或者手机号">
+                </div>
+                <div class="form-group">
+                    <input type="password" class="form-control" id="password" placeholder="输入6-16位密码">
+                </div>
+                <div class="form-group" >
+                    <div class="checkbox col-lg-5" style="padding: 0">
+                        <label>
+                            <input type="checkbox">记住我
+                        </label>
+                    </div>
+                    <a href="#" class="col-lg-3 col-lg-offset-4" style="padding: 0;margin-right: 0">忘记密码</a>
+                </div>
+                <div class="form-group">
+                   <button style="width: 100%" type="submit" class="btn btn-primary">登录</button></a>
+                </div>
+                <div class="form-group" style="margin: 0;">
+                    <div class="pull-right">
+                        <span>其他登录方式：</span>
+                        <img src="image/QQ.jpg" style="width: 30px;">
+                        <img src="image/wechat.jpg" style="width: 30px">
+                    </div>
+                </div>
+            </form>
+        </li>
+        <li id="b" class="tab-pane fade">
+            <form class="form-horizontal">
+                <div class="form-group">
+                    <input type="text" class="form-control" id="username" placeholder="输入注册用户名">
+                </div>
+                <div class="form-group">
+                    <input type="text" class="form-control" id="phone_email" placeholder="输入手机号/邮箱">
+                </div>
+                <div class="form-group">
+                    <input type="password" class="form-control" id="password_1"  placeholder="输入6-16位密码">
+                </div>
+                <div class="form-group" >
+                    <input type="password" class="form-control" id="ensurepassword" placeholder="确认密码">
+                </div>
+                <div class="form-group">
+                    <button style="width: 100%" type="submit" class="btn btn-primary">注册</button>
+                </div>
+            </form>
+        </li>
+    </ul>
+    <div id="check_one" class="checkError"></div>
+    <div id="check_two" class="checkError"></div>
+    <div id="check_three" class="checkError"></div>
+    <div id="check_four" class="checkError"></div>
+    <div id="corner_one" class="small_corner"></div>
+    <div id="corner_two" class="small_corner"></div>
+    <div id="corner_three" class="small_corner"></div>
+    <div id="corner_four" class="small_corner"></div>
+</div>
+</body>
+<script src="lib/jquery/jquery-1.10.1.min.js"></script>
+<script src="lib/jquery/jquery.formCheck.js"></script>
+<script src="lib/bootstrap/js/bootstrap.js"></script>
+<script>
+//    var checkOptions ={
+//        user : $("#user_phone"),
+//        phone_email: $("#phone_email"),
+//        password : $("#password"),
+//        ensure : $("#ensurepassword"),
+//        onCallBack : function () {
+//
+//        }
+//    }
+//    //    登录验证
+//    checkOptions.user = $("#user_phone");
+//    checkOptions.phone_email= $("");
+//    //checkOptions.password = $("#password");
+//    checkOptions.password = $("#password");
+//    checkOptions.ensure = $("");
+//    $(".form_check").formCheck(checkOptions)
+//
+//
+//    //    注册验证
+//    checkOptions.user = $("#username");
+//    checkOptions.phone_email= $("#phone_email");
+//    checkOptions.password = $("#password_1");
+//    checkOptions.ensure = $("#ensurepassword");
+//    $(".form_check").formCheck(checkOptions)
+    //   document.onclick=function () {
+    //       alert( $(".form_check").formCheck(checkOptions));
+    //   }
+
+$("#form_login li").on('click',function () {
+    $(".checkError").text("");
+    $(".checkError").removeClass("showError");
+    $(".small_corner").removeClass("showCorner");
+})
+
+//登录验证
+$("#user_phone").blur(function () {
+    // checkUser();
+    var phone = "^(\\+86|86)?1((3[0-9])|(4[5|7])|(5([0-3]|[5-9]))|(8[0,5-9]))\\d{8}$";//验证手机号
+    var value = $("#user_phone").val();
+    if(value ==""){
+        $("#check_one").text("用户名不能为空！").addClass(" showError");
+        $("#corner_one").addClass(" showCorner");
+    }else if(!(value.match(phone))){
+        $("#check_one").text("请输入正确的手机号格式！").addClass(" showError");
+        $("#corner_one").addClass(" showCorner");
+    }
+});
+$("#password").blur(function () {
+   // alert("haha")
+    // checkPassword();
+    var pw = "^[^ ]{6,16}$"; //验证密码
+    var value2 = $("#password").val();
+    if(value2 == ""){
+        $("#check_two").text("密码不能为空！").addClass(" showError");
+        $("#corner_two").addClass(" showCorner");
+    }else if(!value2.match(pw)){
+        $("#check_two").text("请输入正确的密码格式！").addClass(" showError");
+        $("#corner_two").addClass(" showCorner");
+    }
+});
+$("#user_phone").focus(function () {
+        $("#check_one").removeClass("showError");
+        $("#corner_one").removeClass("showCorner");
+    });
+    $("#password").focus(function () {
+        $("#check_two").removeClass("showError");
+        $("#corner_two").removeClass("showCorner");
+    });
+//注册验证
+$("#phone_email").blur(function () {
+    // checkUser();
+    var phone = "^(\\+86|86)?1((3[0-9])|(4[5|7])|(5([0-3]|[5-9]))|(8[0,5-9]))\\d{8}$";//验证手机号
+    var email= /^[\w-]+@([\w-]+\.)+[a-zA-Z]{2,4}$/ ; //验证email;
+    var value = $("#phone_email").val();
+    if(value ==""){
+        $("#check_two").text("不能为空！").addClass(" showError");
+        $("#corner_two").addClass(" showCorner");
+    }else if(!(value.match(phone) || value.match(email))){
+        $("#check_two").text("请输入正确的手机号/邮箱格式！").addClass(" showError");
+        $("#corner_two").addClass(" showCorner");
+    }
+});
+
+$("#password_1").blur(function () {
+    // alert("haha")
+    // checkPassword();
+    var pw = "^[^ ]{6,16}$"; //验证密码
+    var value2 = $("#password_1").val();
+    if(value2 == ""){
+        $("#check_three").text("密码不能为空！").addClass(" showError");
+        $("#corner_three").addClass(" showCorner");;
+    }else if(!value2.match(pw)){
+        $("#check_three").text("请输入正确的密码格式！").addClass(" showError");
+        $("#corner_three").addClass(" showCorner");;
+    }
+});
+
+$("#ensurepassword").blur(function () {
+    //ensurePassW();
+    var passwordValue = $("#password_1").val();
+    var passwordEnsureValue = $("#ensurepassword").val();
+    if(passwordEnsureValue == ""){
+        $("#check_four").text("请在次填写密码！").addClass(" showError");
+        $("#corner_four").addClass(" showCorner");;
+    }else if(passwordEnsureValue != passwordValue){
+        $("#check_four").text("两次密码输入不一致！").addClass(" showError");
+        $("#corner_four").addClass(" showCorner");
+    }
+});
+$("#phone_email").focus(function () {
+    $("#check_two").removeClass("showError");
+    $("#corner_two").removeClass("showCorner");
+});
+$("#password_1").focus(function () {
+    $("#check_three").removeClass("showError");
+    $("#corner_three").removeClass("showCorner");
+});
+$("#ensurepassword").focus(function () {
+    $("#check_four").removeClass("showError");
+    $("#corner_four").removeClass("showCorner");
+});
+</script>
+</html>

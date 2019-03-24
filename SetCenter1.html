@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <title>个人设置-个人资料</title>
+    <link rel="stylesheet" href="lib/bootstrap/css/bootstrap.css">
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+<nav id="myNavbar" class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container">
+        <div class="navbar-header">
+            <button  class="navbar-toggle" data-toggle="collapse" data-target="#myList">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a href="#" class="navbar-brand"><span class="glyphicon glyphicon-globe icon_brand"></span> Personal微博</a>
+        </div>
+        <div id="myList">
+            <ul class="nav navbar-nav" id="navbar_left">
+                <li><a href="#a" class="active">首页</a></li>
+                <li><a href="#b">热题</a></li>
+                <li><a href="#c">视频</a></li>
+                <li><a href="#d">游戏</a></li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">更多<span class="caret"></span> </a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">111</a></li>
+                        <li><a href="#">222</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        <ul class="nav navbar-nav navbar-right " id="navbar_right">
+            <li>
+                <form class="navbar-form navbar-right">
+                    <div class="input-group">
+                            <span id="search_icon" class="input-group-addon">
+                                <a href="#"><span class="glyphicon glyphicon-search "></span></a>
+                            </span>
+                        <input id="search" type="text" class="form-control" placeholder="搜索微博用户"/>
+                    </div>
+                </form>
+            </li>
+            <li><a href="#"><span class="glyphicon glyphicon-user"></span>&nbsp;&nbsp;登录</a></li>
+            <li><a href="#">注册</a></li>
+            <li><a href="#"><span class="glyphicon glyphicon-envelope"></span></a></li>
+            <li><a href="#"><span class="glyphicon glyphicon-cog"></span></a></li>
+        </ul>
+    </div>
+</nav>
+<div class="container" id="content">
+    <div class="row">
+        <div class="col-lg-1"></div>
+        <div class="col-lg-10 set_content">
+            <div class="row">
+                <div class="col-lg-2 set_content_left">
+                    <p style="color: gray;font-size: 12px"><span class="glyphicon glyphicon-cog"></span> 设置中心</p>
+                    <img src="image/touxiang.jpg"/>
+                    <ul class="nav" id="setting">
+                        <li><span>个人资料 <span class="glyphicon glyphicon-menu-right"></span></span>
+                            <ul class="nav fadechange" id="fadeone">
+                                <li>基本资料</li>
+                                <li>更换头像</li>
+                            </ul>
+                        </li>
+                        <li><span>隐私设置 <span class="glyphicon glyphicon-menu-right"></span></span>
+                            <ul class="nav fadechange" id="fadetwo">
+                                <li>修改密码</li>
+                                <li>关闭账号</li>
+                            </ul>
+                        </li>
+                        <li><span>消息设置</span>
+                        </li>
+                        <li><span>账号绑定 <span class="glyphicon glyphicon-menu-right"></span></span>
+                            <ul class="nav fadechange" id="fadethree">
+                                <li>绑定QQ账号</li>
+                                <li>绑定手机账号</li>
+                                <li>绑定百度账号</li>
+                                <li>绑定淘宝账号</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-lg-10 set_content_right">
+                    <div id="set_title">设置中心</div>
+                    <div><span style="color:red">*</span>为必填，完整的资料会为你带来更多关注
+                        如实填写行业、教育和工作等信息，能帮你找到微博里的同行、同学和同事。</div>
+
+                </div>
+                <div>
+                    jjjjjjjjjjjjjjjjjjjjjjjj
+                </div>
+            </div>
+
+        </div>
+        <div class="col-lg-1"></div>
+    </div>
+</div>
+</body>
+<script src="lib/jquery/jquery-1.10.1.min.js"></script>
+<script src="lib/jquery/jquery.pageBar.js"></script>
+<script src="lib/bootstrap/js/bootstrap.js"></script>
+<script>
+    $('#setting>li>span').on('click',function () {
+        $(this).siblings().slideToggle();
+    })
+
+    $(".fadechange li").on('click',function () {
+        $(".fadechange li").css('background-color','white').css('color','gray');
+        $(this).css('background-color','#EFF2F4').css('color','black');
+    })
+</script>
+</html>

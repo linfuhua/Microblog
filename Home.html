@@ -1,0 +1,885 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <title>微博首页</title>
+    <link rel="stylesheet" href="lib/bootstrap/css/bootstrap.css">
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body data-spy="scroll" data-target="#myNavbar">
+
+<nav id="myNavbar" class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container">
+        <div class="navbar-header">
+            <button  class="navbar-toggle" data-toggle="collapse" data-target="#myList">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a href="#" class="navbar-brand"><span class="glyphicon glyphicon-globe icon_brand"></span> Personal微博</a>
+        </div>
+        <div id="myList">
+            <ul class="nav navbar-nav" id="navbar_left">
+                <li><a href="Home.html" class="active">首页</a></li>
+                <li><a href="#b">热题</a></li>
+                <li><a href="#c">视频</a></li>
+                <li><a href="#d">游戏</a></li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">更多<span class="caret"></span> </a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">111</a></li>
+                        <li><a href="#">222</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+            <ul class="nav navbar-nav navbar-right visible-lg visible-md" id="navbar_right">
+                <li class="visible-lg">
+                    <form class="navbar-form navbar-right">
+                        <div class="input-group">
+                            <span id="search_icon" class="input-group-addon">
+                                <a href="#"><span class="glyphicon glyphicon-search "></span></a>
+                            </span>
+                            <input id="search" type="text" class="form-control" placeholder="搜索微博用户"/>
+                        </div>
+                    </form>
+                </li>
+                <li><a href="#" id="login"><span class="glyphicon glyphicon-user"></span>&nbsp;&nbsp;登录</a></li>
+                <li><a href="#">注册</a></li>
+                <li><a href="#"><span class="glyphicon glyphicon-envelope"></span></a></li>
+                <li><a href="SetCenter.html" ><span class="glyphicon glyphicon-cog"></span></a></li>
+            </ul>
+    </div>
+</nav>
+<div id="small_corner" class="visible-lg"></div>
+<div id="left" style="left:-150px" class="visible-lg">
+    <ul class="nav">
+        <li><a href="#">首页</a></li>
+        <li><a href="#">热门微博</a></li>
+        <li><a href="#">热门视频</a></li>
+    </ul>
+    <ul class="nav">
+        <li><a href="#">我的主页</a></li>
+        <li><a href="#">我的好友圈</a></li>
+        <li><a href="#">我的收藏</a></li>
+        <li><a href="#">特别关注</a></li>
+    </ul>
+    <div id="left_btn"><span class="glyphicon glyphicon-chevron-right"></span></div>
+</div>
+<div class="container" id="content">
+    <div class="row">
+        <div class="col-lg-2">
+        </div>
+
+        <div class="col-lg-7 col-md-8" id="content_center_top">
+            <div id="center_one">
+                <p>每日好心情，今天想说点什么呢 <span class="glyphicon glyphicon-pencil"></span></p>
+                <textarea></textarea>
+                <ul class="nav nav-tabs" style="border:none">
+                    <li><img src="image/smile.PNG"> 表情</li>
+                    <li><span class="glyphicon glyphicon-picture" style="color: greenyellow" ></span> 图片</li>
+                    <li><span class="glyphicon glyphicon-facetime-video" style="color:lightskyblue"></span> 视频</li>
+                    <li><span class="glyphicon glyphicon-music" style="color: #fc9d99" ></span> 音乐</li>
+                    <li class="pull-right"><button class="btn btn-sm btn-primary">发表</button></li>
+                </ul>
+            </div>
+            <div id="centent_two">
+                <ul class="nav nav-pills" id="centent_two_ul">
+                    <li class="nav_change" style="color:red;">全部</li>
+                    <li>图片</li>
+                    <li>视频</li>
+                    <li>音乐</li>
+                    <li>热门</li>
+                </ul>
+            </div>
+            <div class="content_three" style="padding:25px 45px;font-size: 15px">
+                <canvas class="canvas" style="position: absolute;top:-2px;left:-48px;">
+                    对不起，您的浏览器不支持，请升级您的浏览器</canvas>
+                <div class="img"><img src="image/touxiang.jpg" /></div>
+                <a href="#"><strong>微博故事</strong></a> <span class="lever">Lv2</span>
+                <p style="margin-top: 5px">赵丽颖更新微博，晒出旅游美照，其中一张美背照最撩人！希望颖宝能放松心情，
+                    重新出发。接下来，坐等新剧开播。</p>
+                <div class="row" style="padding-left: 15px">
+                    <div class="col-lg-3 col-md-3 col-sm-4 col-xs-6"><img src="image/1.PNG"/></div>
+                    <div class="col-lg-3 col-md-3 col-sm-4 col-xs-6"><img src="image/2.PNG"/></div>
+                    <div class="col-lg-3 col-md-3 col-sm-4 col-xs-6"><img src="image/3.PNG"/></div>
+                    <div class="col-lg-3 col-md-3 col-sm-4 col-xs-6"></div>
+                </div>
+                <div class="row" style="padding-left: 15px">
+                    <div class="col-lg-3 col-md-3 col-sm-4 col-xs-6"><img src="image/4.PNG"/></div>
+                    <div class="col-lg-3 col-md-3 col-sm-4 col-xs-6"><img src="image/5.PNG"/></div>
+                </div>
+                <ul  class="nav nav-pills" style="display: inline;">
+                    <li>2018年5月27号 19:27</li>
+                    <li class="pull-right"><span class="glyphicon glyphicon-star"></span> 收藏</li>
+                    <li class="pull-right"><span class="glyphicon glyphicon-share"></span> 20</li>
+                    <li class="pull-right comment"><span class="glyphicon glyphicon-comment"></span> 105</li>
+                    <li class="pull-right">
+                        <span id="zan0" class="glyphicon glyphicon-thumbs-up"></span>
+                        <span id="zan0_total"> 62</span>
+                    </li>
+                </ul>
+                <div id="comment_area0" style="position: relative;display: none">
+                    <div>
+                        <textarea></textarea>
+                        <ul class="nav nav-pills">
+                            <li><img src="image/smile.PNG" style="width: 15px"> 表情</li>
+                            <li><span class="glyphicon glyphicon-picture" style="color: greenyellow" ></span> 图片</li>
+                            <li><span style="color:lightskyblue">@</span> 朋友</li>
+                            <li class="pull-right"><button>发表</button></li>
+                        </ul>
+                    </div>
+                    <div style=";width: 100%;">
+                        <ul class="nav" >
+                            <li>
+                                <div class="row" style="margin:0;">
+                                    <div class="col-lg-1" style="padding:0 10px 0 0 "><img src="image/touxiang.jpg"/> </div>
+                                    <div class="col-lg-11" style="font-size: 12px">
+                                        <a href="javascript:void(0)">Linapurple：</a>图二！我死了死了，太美了呀[泪][泪]<br/>
+                                        <span>5月27日 19:56</span>
+                                        <span class="pull-right" style="margin-left: 10px; ">
+                                            <a href="javascript:void(0)">
+                                                <span class="glyphicon glyphicon-thumbs-up"></span> 赞
+                                            </a>
+                                        </span>
+                                        <span class="pull-right"><a href="javascript:void(0)">回复</a></span>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="row" style="margin:0;">
+                                    <div class="col-lg-1" style="padding:0 10px 0 0 "><img src="image/touxiang.jpg"/> </div>
+                                    <div class="col-lg-11" style="font-size: 12px">
+                                        <a href="javascript:void(0)">ERICWU1990：</a>妈呀，前段时间金像奖还挺肉的，现在就瘦下来，真是下功夫啦。
+                                        一瘦下来美啊气质啊全都回来啦哈哈<br/>
+                                        <span>5月27日 19:56</span>
+                                        <span class="pull-right" style="margin-left: 10px; ">
+                                            <a href="javascript:void(0)">
+                                                <span class="glyphicon glyphicon-thumbs-up"></span> 赞
+                                            </a>
+                                        </span>
+                                        <span class="pull-right"><a href="javascript:void(0)">回复</a></span>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="row" style="margin:0">
+                                    <div class="col-lg-1" style="padding:0 10px 0 0 "><img src="image/touxiang.jpg"/> </div>
+                                    <div class="col-lg-11" style="font-size: 12px">
+                                        <a href="javascript:void(0)">柒柒--123：</a>好美[爱你]<br/>
+                                        <span>5月27日 19:56</span>
+                                        <span class="pull-right" style="margin-left: 10px; ">
+                                            <a href="javascript:void(0)">
+                                                <span class="glyphicon glyphicon-thumbs-up"></span> 赞
+                                            </a>
+                                        </span>
+                                        <span class="pull-right"><a href="javascript:void(0)">回复</a></span>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="row" style="margin:0;">
+                                    <div class="col-lg-1" style="padding:0 10px 0 0 "><img src="image/touxiang.jpg"/> </div>
+                                    <div class="col-lg-11" style="font-size: 12px">
+                                        <a href="javascript:void(0)">我是喵喵妙妙：</a>太美了。所以薇姐才是想美就美。不想就随意。支持薇姐<br/>
+                                        <span>5月27日 19:56</span>
+                                        <span class="pull-right" style="margin-left: 10px; ">
+                                            <a href="javascript:void(0)">
+                                                <span class="glyphicon glyphicon-thumbs-up"></span> 赞
+                                            </a>
+                                        </span>
+                                        <span class="pull-right"><a href="javascript:void(0)">回复</a></span>
+                                    </div>
+                                </div>
+                            </li>
+                            <li style="text-align: center"><span><a href="javascript:void(0)" style="padding:0">
+                                查看更多 ></a></span></li>
+                        </ul>
+                    </div>
+                    <span class="comment_corner"></span>
+                </div>
+            </div>
+            <div class="content_three" style="padding:25px 45px;font-size: 15px">
+                <canvas class="canvas" style="position: absolute;top:-2px;left:-48px;">
+                    对不起，您的浏览器不支持，请升级您的浏览器</canvas>
+                <div class="img"><img src="image/touxiang.jpg" /></div>
+                <a href="#"><strong>六Q酱</strong></a> <span class="lever">Lv2</span>
+                <p style="margin-top: 5px">热到崩溃</p>
+                <div class="row" style="padding-left: 15px">
+                    <div class="col-lg-3 col-md-3 col-sm-5 col-xs-5"><img src="image/cat.jpg"/></div>
+                </div>
+                <ul  class="nav nav-pills" style="display: inline;">
+                    <li>2018年5月27号 20:46</li>
+                    <li class="pull-right"><span class="glyphicon glyphicon-star"></span> 收藏</li>
+                    <li class="pull-right"><span class="glyphicon glyphicon-share"></span> 20</li>
+                    <li class="pull-right comment1"><span class="glyphicon glyphicon-comment"></span> 105</li>
+                    <li class="pull-right"><span class="glyphicon glyphicon-thumbs-up"></span> 62</li>
+                </ul>
+                <div id="comment_area1" style="position: relative;display: none">
+                    <div>
+                        <textarea></textarea>
+                        <ul class="nav nav-pills">
+                            <li><img src="image/smile.PNG" style="width: 15px"> 表情</li>
+                            <li><span class="glyphicon glyphicon-picture" style="color: greenyellow" ></span> 图片</li>
+                            <li><span style="color:lightskyblue">@</span> 朋友</li>
+                            <li class="pull-right"><button>发表</button></li>
+                        </ul>
+                    </div>
+                    <div style=";width: 100%;">
+                        <ul class="nav" >
+                            <li>
+                                <div class="row" style="margin:0;">
+                                    <div class="col-lg-1" style="padding:0 10px 0 0 "><img src="image/touxiang.jpg"/> </div>
+                                    <div class="col-lg-11" style="font-size: 12px">
+                                        <a href="javascript:void(0)">Ha:</a>我是那只猫<br/>
+                                        <span>5月27日 20:46</span>
+                                        <span class="pull-right" style="margin-left: 10px; ">
+                                            <a href="javascript:void(0)">
+                                                <span class="glyphicon glyphicon-thumbs-up"></span> 赞
+                                            </a>
+                                        </span>
+                                        <span class="pull-right"><a href="javascript:void(0)">回复</a></span>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="row" style="margin:0;">
+                                    <div class="col-lg-1" style="padding:0 10px 0 0 "><img src="image/touxiang.jpg"/> </div>
+                                    <div class="col-lg-11" style="font-size: 12px">
+                                        <a href="javascript:void(0)"><img src="image/ha.PNG" style="width:60px;"/>
+                                            ling：</a>哈哈啊哈哈<br/>
+                                        <span>5月27日 20:47</span>
+                                        <span class="pull-right" style="margin-left: 10px; ">
+                                            <a href="javascript:void(0)">
+                                                <span class="glyphicon glyphicon-thumbs-up"></span> 赞
+                                            </a>
+                                        </span>
+                                        <span class="pull-right"><a href="javascript:void(0)">回复</a></span>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="row" style="margin:0">
+                                    <div class="col-lg-1" style="padding:0 10px 0 0 "><img src="image/touxiang.jpg"/> </div>
+                                    <div class="col-lg-11" style="font-size: 12px">
+                                        <a href="javascript:void(0)">时光未达</a>我看到了山河人间！！！<br/>
+                                        <span>5月27日 20:48</span>
+                                        <span class="pull-right" style="margin-left: 10px; ">
+                                            <a href="javascript:void(0)">
+                                                <span class="glyphicon glyphicon-thumbs-up"></span> 赞
+                                            </a>
+                                        </span>
+                                        <span class="pull-right"><a href="javascript:void(0)">回复</a></span>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="row" style="margin:0;">
+                                    <div class="col-lg-1" style="padding:0 10px 0 0 "><img src="image/touxiang.jpg"/> </div>
+                                    <div class="col-lg-11" style="font-size: 12px">
+                                        <a href="javascript:void(0)">檐生：</a>山河人间亮了<br/>
+                                        <span>5月27日 19:56</span>
+                                        <span class="pull-right" style="margin-left: 10px; ">
+                                            <a href="javascript:void(0)">
+                                                <span class="glyphicon glyphicon-thumbs-up"></span> 赞
+                                            </a>
+                                        </span>
+                                        <span class="pull-right"><a href="javascript:void(0)">回复</a></span>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="row" style="margin:0;">
+                                    <div class="col-lg-1" style="padding:0 10px 0 0 "><img src="image/touxiang.jpg"/> </div>
+                                    <div class="col-lg-11" style="font-size: 12px">
+                                        <a href="javascript:void(0)">Lee傻丫头呗嘎：</a>猫：我是谁，我在哪<br/>
+                                        <span>5月27日 20:00</span>
+                                        <span class="pull-right" style="margin-left: 10px; ">
+                                            <a href="javascript:void(0)">
+                                                <span class="glyphicon glyphicon-thumbs-up"></span> 赞
+                                            </a>
+                                        </span>
+                                        <span class="pull-right"><a href="javascript:void(0)">回复</a></span>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="row" style="margin:0;">
+                                    <div class="col-lg-1" style="padding:0 10px 0 0 "><img src="image/touxiang.jpg"/> </div>
+                                    <div class="col-lg-11" style="font-size: 12px">
+                                        <a href="javascript:void(0)">浑浑噩噩额：</a>好可爱的猫，好想养一只<br/>
+                                        <span>5月27日 20:03</span>
+                                        <span class="pull-right" style="margin-left: 10px; ">
+                                            <a href="javascript:void(0)">
+                                                <span class="glyphicon glyphicon-thumbs-up"></span> 赞
+                                            </a>
+                                        </span>
+                                        <span class="pull-right"><a href="javascript:void(0)">回复</a></span>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="row" style="margin:0;">
+                                    <div class="col-lg-1" style="padding:0 10px 0 0 "><img src="image/touxiang.jpg"/> </div>
+                                    <div class="col-lg-11" style="font-size: 12px">
+                                        <a href="javascript:void(0)">兮言闲：</a>哈哈哈此刻吹着空调<br/>
+                                        <span>5月27日 20:05</span>
+                                        <span class="pull-right" style="margin-left: 10px; ">
+                                            <a href="javascript:void(0)">
+                                                <span class="glyphicon glyphicon-thumbs-up"></span> 赞
+                                            </a>
+                                        </span>
+                                        <span class="pull-right"><a href="javascript:void(0)">回复</a></span>
+                                    </div>
+                                </div>
+                            </li>
+
+                            <li style="text-align: center"><span><a href="javascript:void(0)" style="padding:0">
+                                查看更多 ></a></span></li>
+                        </ul>
+                    </div>
+                    <span class="comment_corner"></span>
+                </div>
+            </div>
+
+            <div class="content_three" style="padding:25px 45px;font-size: 15px">
+                <canvas class="canvas" style="position: absolute;top:-2px;left:-48px;">
+                    对不起，您的浏览器不支持，请升级您的浏览器</canvas>
+                <div class="img"><img src="image/touxiang.jpg" /></div>
+                <a href="#"><strong>爱舞蹈更爱你</strong></a> <span class="lever">Lv2</span>
+                <p style="margin-top: 5px">笑死我了哈哈哈，这两只荷兰猪太可爱了</p>
+                <div class="row" style="padding:0 15px">
+                    <div style="text-align: center" class="">
+                        <video  style="margin: 0 auto" width="100%" autoplay>
+                            <source src="video/seven.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                </div>
+                <ul  class="nav nav-pills" style="display: inline;">
+                    <li>2018年5月28号 23:52</li>
+                    <li class="pull-right"><span class="glyphicon glyphicon-star"></span> 收藏</li>
+                    <li class="pull-right"><span class="glyphicon glyphicon-share"></span> 20</li>
+                    <li class="pull-right comment2"><span class="glyphicon glyphicon-comment"></span> 105</li>
+                    <li class="pull-right"><span class="glyphicon glyphicon-thumbs-up"></span> 62</li>
+                </ul>
+                <div id="comment_area2" style="position: relative;display: none">
+                    <div>
+                        <textarea></textarea>
+                        <ul class="nav nav-pills">
+                            <li><img src="image/smile.PNG" style="width: 15px"> 表情</li>
+                            <li><span class="glyphicon glyphicon-picture" style="color: greenyellow" ></span> 图片</li>
+                            <li><span style="color:lightskyblue">@</span> 朋友</li>
+                            <li class="pull-right"><button>发表</button></li>
+                        </ul>
+                    </div>
+                    <div style=";width: 100%;">
+                        <ul class="nav" >
+                            <li>
+                                <div class="row" style="margin:0;">
+                                    <div class="col-lg-1" style="padding:0 10px 0 0 "><img src="image/touxiang.jpg"/> </div>
+                                    <div class="col-lg-11" style="font-size: 12px">
+                                        <a href="javascript:void(0)">幽静馨一：</a>半夜笑出猪叫声哈哈哈<br/>
+                                        <span>5月28日 23:53</span>
+                                        <span class="pull-right" style="margin-left: 10px; ">
+                                            <a href="javascript:void(0)">
+                                                <span class="glyphicon glyphicon-thumbs-up"></span> 赞
+                                            </a>
+                                        </span>
+                                        <span class="pull-right"><a href="javascript:void(0)">回复</a></span>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="row" style="margin:0;">
+                                    <div class="col-lg-1" style="padding:0 10px 0 0 "><img src="image/touxiang.jpg"/> </div>
+                                    <div class="col-lg-11" style="font-size: 12px">
+                                        <a href="javascript:void(0)">细细芊钩：</a>太可爱了<br/>
+                                        <span>5月28日 23:55</span>
+                                        <span class="pull-right" style="margin-left: 10px; ">
+                                            <a href="javascript:void(0)">
+                                                <span class="glyphicon glyphicon-thumbs-up"></span> 赞
+                                            </a>
+                                        </span>
+                                        <span class="pull-right"><a href="javascript:void(0)">回复</a></span>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="row" style="margin:0">
+                                    <div class="col-lg-1" style="padding:0 10px 0 0 "><img src="image/touxiang.jpg"/> </div>
+                                    <div class="col-lg-11" style="font-size: 12px">
+                                        <a href="javascript:void(0)">时光未达</a>我看到了山河人间！！！<br/>
+                                        <span>5月28日 23：58</span>
+                                        <span class="pull-right" style="margin-left: 10px; ">
+                                            <a href="javascript:void(0)">
+                                                <span class="glyphicon glyphicon-thumbs-up"></span> 赞
+                                            </a>
+                                        </span>
+                                        <span class="pull-right"><a href="javascript:void(0)">回复</a></span>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="row" style="margin:0;">
+                                    <div class="col-lg-1" style="padding:0 10px 0 0 "><img src="image/touxiang.jpg"/> </div>
+                                    <div class="col-lg-11" style="font-size: 12px">
+                                        <a href="javascript:void(0)">土味老爹的粉丝：</a>想养一只<br/>
+                                        <span>5月28日 23:58</span>
+                                        <span class="pull-right" style="margin-left: 10px; ">
+                                            <a href="javascript:void(0)">
+                                                <span class="glyphicon glyphicon-thumbs-up"></span> 赞
+                                            </a>
+                                        </span>
+                                        <span class="pull-right"><a href="javascript:void(0)">回复</a></span>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="row" style="margin:0;">
+                                    <div class="col-lg-1" style="padding:0 10px 0 0 "><img src="image/touxiang.jpg"/> </div>
+                                    <div class="col-lg-11" style="font-size: 12px">
+                                        <a href="javascript:void(0)">景钰夭夭：</a>你是想笑死我然后继承我的作业吗哈哈哈哈哈<br/>
+                                        <span>5月29日 00:02</span>
+                                        <span class="pull-right" style="margin-left: 10px; ">
+                                            <a href="javascript:void(0)">
+                                                <span class="glyphicon glyphicon-thumbs-up"></span> 赞
+                                            </a>
+                                        </span>
+                                        <span class="pull-right"><a href="javascript:void(0)">回复</a></span>
+                                    </div>
+                                </div>
+                            </li>
+                            <li style="text-align: center"><span><a href="javascript:void(0)" style="padding:0">
+                                查看更多 ></a></span></li>
+                        </ul>
+                    </div>
+                    <span class="comment_corner"></span>
+                </div>
+            </div>
+
+            <div class="g-cf g-pagerwp">
+                <div style="visibility:hidden" class="page">
+                </div>
+            </div>
+
+        </div>
+        <div class="col-lg-3 col-md-4" id="content_right_top">
+            <div class="thumbnail" style="padding: 0">
+                <div class="div"><a href="pesonalPage.html"><img src="image/touxiang.jpg"></a></div>
+                <div class="caption">
+                    <h5><strong>linfuhua浮华</strong>&nbsp;<span class="lever">Lv1</span></h5>
+                    <p>书山有路勤为径，学海无涯苦作舟</p>
+                    <ul class="nav nav-tabs nav-justified" style="margin: 0;">
+                        <li style="text-align: left;">
+                            <a href="#"><span class="glyphicon glyphicon-comment"></span>&nbsp;&nbsp;微博
+                                <span class="pull-right"><strong>60</strong></span>
+                            </a>
+                        </li>
+                        <li style="text-align: left;">
+                            <a href="#"><span class="glyphicon glyphicon-heart"></span>&nbsp;&nbsp;粉丝
+                                <span class="pull-right"><strong>60</strong></span>
+                            </a>
+                        </li>
+                        <li style="text-align: left;">
+                            <a href="#"><span class="glyphicon glyphicon-star-empty"></span>&nbsp;&nbsp;关注
+                                <span class="pull-right"><strong>60</strong></span>
+                            </a>
+                        </li>
+                        <li style="text-align: left;">
+                            <a href="#"><span class="glyphicon glyphicon-send"></span>&nbsp;&nbsp;收藏
+                                <span class="pull-right"><strong>60</strong></span>
+                            </a>
+                        </li>
+                        <li style="text-align: left;">
+                            <a href="#"><span class="glyphicon glyphicon-envelope"></span>&nbsp;&nbsp;私信
+                                <span class="pull-right"><strong>60</strong></span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div id="broadcast" class="visible-lg visible-md">
+                <div id="broadcast_caption">热门电影前五榜<span class="glyphicon glyphicon-fire"></span></div>
+                <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+                    <!-- Indicators -->
+                    <ol class="carousel-indicators">
+                        <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+                        <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+                        <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+                        <li data-target="#carousel-example-generic" data-slide-to="3"></li>
+                        <li data-target="#carousel-example-generic" data-slide-to="4"></li>
+                    </ol>
+
+                    <!-- Wrapper for slides -->
+                    <div class="carousel-inner" role="listbox">
+                        <div class="item active">
+                            <img src="image/fuchouzhe%20(2).jpg" alt="...">
+                            <div class="carousel-caption">
+                                ...
+                            </div>
+                        </div>
+                        <div class="item">
+                            <img src="image/konglong.jpg" alt="...">
+                            <div class="carousel-caption">
+                                ...
+                            </div>
+                        </div>
+                        <div class="item">
+                            <img src="image/scene3.jpg" alt="...">
+                            <div class="carousel-caption">
+                                ...
+                            </div>
+                        </div>
+                        <div class="item">
+                            <img src="image/scene4.jpg" alt="...">
+                            <div class="carousel-caption">
+                                ...
+                            </div>
+                        </div>
+                        <div class="item">
+                            <img src="image/scene4.jpg" alt="...">
+                            <div class="carousel-caption">
+                                ...
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Controls -->
+                    <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+                        <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                        <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+                        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                        <span class="sr-only">Next</span>
+                    </a>
+                </div>
+                <div id="broadcast_ul">
+                    <ul class="nav">
+                        <li><a href="javascript:void(0)"><span class="badge">1</span> 复仇者联盟3</a></li>
+                        <li><a href="javascript:void(0)"><span class="badge">2</span> 侏罗纪世界2</a></li>
+                        <li><a href="javascript:void(0)"><span class="badge">3</span> 寂静之地</a></li>
+                        <li><a href="javascript:void(0)"><span class="badge">4</span> 超时空同居</a></li>
+                        <li><a href="javascript:void(0)"><span class="badge">5</span> 哆啦A梦：大雄的金银岛</a></li>
+                    </ul>
+                </div>
+                <div id="broadcast_more"><a href="javascript:void(0);" >查看更多 ></a></div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="row" id="bottom" style="margin-top: 50px;">
+    <div>
+        <a href="javascript:void(0)">微博客服</a>&nbsp;&nbsp;&nbsp;&nbsp;客服热线4000-960-960
+        <a href="javascript:void(0)">意见反馈</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="javascript:void(0)">舞弊举报</a>
+        &nbsp;&nbsp;&nbsp;&nbsp;<a href="javascript:void(0)">开放平台</a>&nbsp;&nbsp;&nbsp;&nbsp;
+        <a href="javascript:void(0)">微博招聘</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="javascript:void(0)">举报处理大厅</a>
+        &nbsp;&nbsp;&nbsp;&nbsp;<a href="javascript:void(0)">京ICP证100780号</a> &nbsp;&nbsp;&nbsp;&nbsp;
+        <a href="javascript:void(0)">互联网药品服务许可证</a>&nbsp;&nbsp;&nbsp;&nbsp;
+        <a href="javascript:void(0)">京网文[2017]10291-1172号</a> &nbsp;&nbsp;&nbsp;&nbsp;<a href="javascript:void(0)">京ICP备12002058号</a>
+        &nbsp;&nbsp;&nbsp;&nbsp;<a href="javascript:void(0)">增值电信业务经营许可证B2-20140447</a>
+        &nbsp;&nbsp;&nbsp;&nbsp;<a href="javascript:void(0)">乙测资字1111805</a>&nbsp;&nbsp;&nbsp;&nbsp;
+        Copyright © 2009-2018 WEIBO 北京微梦创科网络技术有限公司&nbsp;&nbsp;&nbsp;&nbsp;<a href="javascript:void(0)">京公网安备11000002000019号</a>
+    </div>
+</div>
+<div class="form_check" style="left:500px;top:100px;width: 350px;position: fixed;display: none;z-index: 10001">
+    <ul class="nav nav-tabs nav-tabs-justified" id="form_login">
+        <li style="width: 175px" class="active"><a href="#a" data-toggle="tab">登录</a></li>
+        <li style="width: 175px"><a href="#b" class="dropdown-toggle" data-toggle="tab">注册</a></li>
+    </ul>
+    <ul class="tab-content" >
+        <li id="a" class="tab-pane active fade in">
+            <form class="form-horizontal">
+                <div class="form-group">
+                    <input type="text" class="form-control" id="user_phone" placeholder="输入用户名或者手机号">
+                </div>
+                <div class="form-group">
+                    <input type="password" class="form-control" id="password" placeholder="输入6-16位密码">
+                </div>
+                <div class="form-group" >
+                    <div class="checkbox col-lg-5" style="padding: 0">
+                        <label>
+                            <input type="checkbox"/><span style="color:gray">记住我</span>
+                        </label>
+                    </div>
+                    <a href="#" class="col-lg-3 col-lg-offset-4" style="padding: 0;margin-right: 0">忘记密码</a>
+                </div>
+                <div class="form-group">
+                    <button style="width: 100%" type="submit" class="btn btn-primary">登录</button>
+                </div>
+                <div class="form-group" style="margin: 0;">
+                    <div class="pull-right">
+                        <span style="color:gray">其他登录方式：</span>
+                        <img src="image/QQ.jpg" style="width: 30px;">
+                        <img src="image/wechat.jpg" style="width: 30px">
+                    </div>
+                </div>
+            </form>
+        </li>
+        <li id="b" class="tab-pane fade">
+            <form class="form-horizontal">
+                <div class="form-group">
+                    <input type="text" class="form-control" id="username" placeholder="输入注册用户名">
+                </div>
+                <div class="form-group">
+                    <input type="text" class="form-control" id="phone_email" placeholder="输入手机号/邮箱">
+                </div>
+                <div class="form-group">
+                    <input type="password" class="form-control" id="password_1"  placeholder="输入6-16位密码">
+                </div>
+                <div class="form-group" >
+                    <input type="password" class="form-control" id="ensurepassword" placeholder="确认密码">
+                </div>
+                <div class="form-group">
+                    <button style="width: 100%" type="submit" class="btn btn-primary">注册</button>
+                </div>
+            </form>
+        </li>
+    </ul>
+    <div id="check_one" class="checkError"></div>
+    <div id="check_two" class="checkError"></div>
+    <div id="check_three" class="checkError"></div>
+    <div id="check_four" class="checkError"></div>
+    <div id="corner_one" class="small_corner"></div>
+    <div id="corner_two" class="small_corner"></div>
+    <div id="corner_three" class="small_corner"></div>
+    <div id="corner_four" class="small_corner"></div>
+
+    <span id="close" style="font-size:20px;position: absolute;right: -50px;top:-50px;color:white;cursor: pointer">X</span>
+</div>
+<div class="shade"></div>
+</body>
+<script src="lib/jquery/jquery-1.10.1.min.js"></script>
+<script src="lib/jquery/jquery.pageBar.js"></script>
+<script src="lib/bootstrap/js/bootstrap.js"></script>
+<script>
+    $("#navbar_left li>a").on('click',function () {
+        $("#navbar_left li>a").removeClass("active");
+        $(this).addClass("active");
+        $("#small_corner").css('left',($(this).parents().index()*80 + 333)+"px")
+    })
+
+//    右边导航start
+    var isClick =false;
+    $(window).scroll(function (event) {
+        var winPos = $(window).scrollTop();
+        if(parseInt(winPos)>80 && !isClick) {
+            $("#left").addClass("left_show");
+            $("#left").removeClass('left_hidden');
+        }
+    });
+    $("#left_btn").on('mouseover',function () {
+        if(parseInt($("#left").css('left'))== 0){
+            $("#left_btn span").attr('class','glyphicon glyphicon-chevron-left');
+        }
+    });
+    $("#left_btn").on('mouseout',function () {
+        $("#left_btn span").attr('class','glyphicon glyphicon-chevron-right');
+    })
+    $("#left_btn").on('click',function () {
+        isClick = true
+        if(parseInt($("#left").css('left'))== 0){
+            $("#left").addClass("left_hidden");
+            $("#left").removeClass('left_show');
+        }else {
+            $("#left").addClass("left_show");
+            $("#left").removeClass('left_hidden');
+        }
+    })
+//    右边导航end
+
+
+    var index = 0;
+    $("#centent_two_ul li").on('click',function () {
+        $("#centent_two_ul li").removeClass("nav_change").css('color',"black");
+        $(this).addClass("nav_change").css('color',"red");
+        index = $(this).index();
+    });
+    $("#centent_two_ul li").on('mouseover',function () {
+        $("#centent_two_ul li").removeClass("nav_change");
+     //   $("#centent_two_ul li").eq(index).addClass("nav_change");
+        $(this).addClass("nav_change") ;
+    });
+    $("#centent_two_ul").on('mouseout',function () {
+        $("#centent_two_ul li").removeClass("nav_change");
+        $("#centent_two_ul li").eq(index).addClass("nav_change");
+    });
+
+    //画微博item边角
+    var canvas = document.getElementsByTagName("canvas");
+    for(var i=0 ; i<canvas.length;i++) {
+        canvas[i].width = 50;
+        canvas[i].height = 50;
+        //canvas.style.border = "1px solid red"
+        var ctx = canvas[i].getContext('2d');
+        ctx.beginPath();
+        ctx.save();
+        ctx.shadowOffsetX = 0; // 阴影Y轴偏移
+        ctx.shadowOffsetY = 0; // 阴影X轴偏移
+        ctx.shadowBlur = 35; // 模糊尺寸
+        ctx.shadowColor = 'rgba(0, 0, 0, 0.5)'; // 颜色
+        ctx.moveTo(50, 2);
+        ctx.lineTo(25, 2);
+        ctx.lineTo(50, 27);
+        ctx.lineWidth = 2;
+        //ctx.strokeStyle = "#d0d0d0";
+        // ctx.stroke();
+        ctx.fillStyle = "white";
+        ctx.fill();
+    }
+//    var coment_area = comment_area;
+    $(".comment").on('click', function () {
+        $("#comment_area0").slideToggle();
+    })
+    $(".comment1").on('click', function () {
+        $("#comment_area1").slideToggle();
+    })
+    $(".comment2").on('click', function () {
+        $("#comment_area2").slideToggle();
+    })
+
+    var isZan=false;
+    $("#zan0").on('click',function () {
+        if(!isZan){
+            $("#zan0").css('color','orange');
+            $("#zan0_total").text(" 63");
+            isZan = true;
+        }else{
+            $("#zan0").css('color','gray');
+            $("#zan0_total").text(" 62");
+            isZan = false;
+        }
+    })
+
+        //设置分页信息
+        var pageOptions = {
+            AllowPaging: true,
+            PageIndex: 1,       //设置当前页码
+            TotalPage: 100,      //设置总页数
+            showPageCount: 4,
+            onPageClick: function(pageIndex) {
+                if(isNaN(pageIndex)){
+                    return false;
+                }else{
+                    open("Page2.html#id="+pageIndex,'_self');
+                }    //自定义您的翻页事件
+                return false;
+            }
+        };
+        //初始化分页栏
+        $('.g-pagerwp .page').css('visibility', 'visible').pageBar(pageOptions);
+
+
+
+    var now=null;
+    $("#login").on('click',function () {
+        $(".shade").css("display","block");
+        $(".form_check").css("display","block");
+    });
+
+    $("#form_login li").on('click',function () {
+        $(".checkError").text("");
+        $(".checkError").removeClass("showError");
+        $(".small_corner").removeClass("showCorner");
+    })
+
+    //登录验证
+    $("#user_phone").blur(function () {
+        // checkUser();
+        var phone = "^(\\+86|86)?1((3[0-9])|(4[5|7])|(5([0-3]|[5-9]))|(8[0,5-9]))\\d{8}$";//验证手机号
+        var value = $("#user_phone").val();
+        if(value ==""){
+            $("#check_one").text("用户名不能为空！").addClass(" showError");
+            $("#corner_one").addClass(" showCorner");
+        }else if(!(value.match(phone))){
+            $("#check_one").text("请输入正确的手机号格式！").addClass(" showError");
+            $("#corner_one").addClass(" showCorner");
+        }
+    });
+    $("#password").blur(function () {
+        // alert("haha")
+        // checkPassword();
+        var pw = "^[^ ]{6,16}$"; //验证密码
+        var value2 = $("#password").val();
+        if(value2 == ""){
+            $("#check_two").text("密码不能为空！").addClass(" showError");
+            $("#corner_two").addClass(" showCorner");
+        }else if(!value2.match(pw)){
+            $("#check_two").text("请输入正确的密码格式！").addClass(" showError");
+            $("#corner_two").addClass(" showCorner");
+        }
+    });
+    $("#user_phone").focus(function () {
+        $("#check_one").removeClass("showError");
+        $("#corner_one").removeClass("showCorner");
+    });
+    $("#password").focus(function () {
+        $("#check_two").removeClass("showError");
+        $("#corner_two").removeClass("showCorner");
+    });
+    //注册验证
+    $("#phone_email").blur(function () {
+        // checkUser();
+        var phone = "^(\\+86|86)?1((3[0-9])|(4[5|7])|(5([0-3]|[5-9]))|(8[0,5-9]))\\d{8}$";//验证手机号
+        var email= /^[\w-]+@([\w-]+\.)+[a-zA-Z]{2,4}$/ ; //验证email;
+        var value = $("#phone_email").val();
+        if(value ==""){
+            $("#check_two").text("不能为空！").addClass(" showError");
+            $("#corner_two").addClass(" showCorner");
+        }else if(!(value.match(phone) || value.match(email))){
+            $("#check_two").text("请输入正确的手机号/邮箱格式！").addClass(" showError");
+            $("#corner_two").addClass(" showCorner");
+        }
+    });
+
+    $("#password_1").blur(function () {
+        // alert("haha")
+        // checkPassword();
+        var pw = "^[^ ]{6,16}$"; //验证密码
+        var value2 = $("#password_1").val();
+        if(value2 == ""){
+            $("#check_three").text("密码不能为空！").addClass(" showError");
+            $("#corner_three").addClass(" showCorner");;
+        }else if(!value2.match(pw)){
+            $("#check_three").text("请输入正确的密码格式！").addClass(" showError");
+            $("#corner_three").addClass(" showCorner");;
+        }
+    });
+
+    $("#ensurepassword").blur(function () {
+        //ensurePassW();
+        var passwordValue = $("#password_1").val();
+        var passwordEnsureValue = $("#ensurepassword").val();
+        if(passwordEnsureValue == ""){
+            $("#check_four").text("请在次填写密码！").addClass(" showError");
+            $("#corner_four").addClass(" showCorner");;
+        }else if(passwordEnsureValue != passwordValue){
+            $("#check_four").text("两次密码输入不一致！").addClass(" showError");
+            $("#corner_four").addClass(" showCorner");
+        }
+    });
+    $("#phone_email").focus(function () {
+        $("#check_two").removeClass("showError");
+        $("#corner_two").removeClass("showCorner");
+    });
+    $("#password_1").focus(function () {
+        $("#check_three").removeClass("showError");
+        $("#corner_three").removeClass("showCorner");
+    });
+    $("#ensurepassword").focus(function () {
+        $("#check_four").removeClass("showError");
+        $("#corner_four").removeClass("showCorner");
+    });
+
+    $("#close").on('click',function () {
+        $(".shade").css("display","none");
+        $(".form_check").css("display","none");
+        $(".checkError").text("");
+        $(".checkError").removeClass("showError");
+        $(".small_corner").removeClass("showCorner");
+
+    })
+</script>
+</html>

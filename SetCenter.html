@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <title>个人设置</title>
+    <link rel="stylesheet" href="lib/bootstrap/css/bootstrap.css">
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+<nav id="myNavbar" class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container">
+        <div class="navbar-header">
+            <button  class="navbar-toggle" data-toggle="collapse" data-target="#myList">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a href="#" class="navbar-brand"><span class="glyphicon glyphicon-globe icon_brand"></span> Personal微博</a>
+        </div>
+        <div id="myList">
+            <ul class="nav navbar-nav" id="navbar_left">
+                <li><a href="Home.html" class="active">首页</a></li>
+                <li><a href="#b">热题</a></li>
+                <li><a href="#c">视频</a></li>
+                <li><a href="#d">游戏</a></li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">更多<span class="caret"></span> </a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">111</a></li>
+                        <li><a href="#">222</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        <ul class="nav navbar-nav navbar-right " id="navbar_right">
+            <li>
+                <form class="navbar-form navbar-right">
+                    <div class="input-group">
+                            <span id="search_icon" class="input-group-addon">
+                                <a href="#"><span class="glyphicon glyphicon-search "></span></a>
+                            </span>
+                        <input id="search" type="text" class="form-control" placeholder="搜索微博用户"/>
+                    </div>
+                </form>
+            </li>
+            <li><a href="#" id="login"><span class="glyphicon glyphicon-user"></span>&nbsp;&nbsp;登录</a></li>
+            <li><a href="#">注册</a></li>
+            <li><a href="#"><span class="glyphicon glyphicon-envelope"></span></a></li>
+            <li><a href="#"><span class="glyphicon glyphicon-cog"></span></a></li>
+        </ul>
+    </div>
+</nav>
+<div class="container" id="content">
+    <div class="row">
+        <div class="col-lg-1"></div>
+        <div class="col-lg-10 set_content">
+            <div class="row">
+                <div class="col-lg-2 set_content_left">
+                    <p style="color: gray;font-size: 12px"><span class="glyphicon glyphicon-cog"></span> 设置中心</p>
+                    <img src="image/touxiang.jpg"/>
+                    <ul class="nav" id="setting">
+                        <li><span>个人资料 <span class="glyphicon glyphicon-menu-right"></span></span>
+                            <ul class="nav fadechange" id="fadeone">
+                                <li>基本资料</li>
+                                <li>更换头像</li>
+                            </ul>
+                        </li>
+                        <li><span>隐私设置 <span class="glyphicon glyphicon-menu-right"></span></span>
+                            <ul class="nav fadechange" id="fadetwo">
+                                <li>修改密码</li>
+                                <li>关闭账号</li>
+                            </ul>
+                        </li>
+                        <li><span>消息设置</span>
+                        </li>
+                        <li><span>账号绑定 <span class="glyphicon glyphicon-menu-right"></span></span>
+                            <ul class="nav fadechange" id="fadethree">
+                                <li>绑定QQ账号</li>
+                                <li>绑定手机账号</li>
+                                <li>绑定百度账号</li>
+                                <li>绑定淘宝账号</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-lg-10 set_content_right">
+                    <div id="set_title">设置中心</div>
+                    <div><span style="color:red">*</span>为必填，完整的资料会为你带来更多关注
+                        如实填写行业、教育和工作等信息，能帮你找到微博里的同行、同学和同事。</div>
+                    <div class="row">
+                        <div class="col-lg-1"></div>
+                        <div class="col-lg-10">
+                            <form>
+                                <div class="table-responsive">
+                                    <table class="table table-bordered table-hover">
+                                        <tr>
+                                            <td>帐号</td>
+                                            <td>linfuhua浮华</td>
+                                        </tr>
+                                        <tr>
+                                            <td>姓名</td>
+                                            <td><input type="text"></td>
+                                        </tr>
+                                        <tr>
+                                            <td>性别</td>
+                                            <td>
+                                                <input type="radio" name="sex" value="male" checked> 男 &nbsp;
+                                                <input  type="radio" name="sex" value="female"> 女
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>生日</td>
+                                            <td>
+                                                <select>
+                                                    <option>1990年</option><option>1991年</option><option>1992年</option>
+                                                    <option>1993年</option><option>1994年</option><option>1995年</option>
+                                                    <option>1996年</option><option>1997年</option><option>1998年</option>
+                                                    <option>1999年</option><option>2000年</option>
+                                                </select>
+                                                <select>
+                                                    <option>1月</option><option>2月</option><option>3月</option>
+                                                    <option>4月</option><option>5月</option><option>6月</option>
+                                                    <option>7月</option><option>8月</option><option>9月</option>
+                                                    <option>10月</option><option>11月</option><option>12月</option>
+                                                </select>
+                                                <select>
+                                                    <option>1日</option><option>2日</option><option>3日</option>
+                                                    <option>4日</option><option>5日</option><option>6日</option>
+                                                    <option>7日</option><option>8日</option><option>9日</option>
+                                                    <option>10日</option><option>11日</option>
+                                                </select>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>国家</td>
+                                            <td>
+                                                <select>
+                                                    <option>中国</option><option>阿富汗</option><option>埃及</option>
+                                                    <option>爱尔兰</option><option>安哥拉</option><option>澳大利亚</option>
+                                                    <option>波兰</option><option>挪威</option><option>芬兰</option>
+                                                    <option>日本</option><option>美国</option>
+                                                </select>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>地区</td>
+                                            <td>
+                                                <select>
+                                                    <option>地区</option>
+                                                </select>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>职业</td>
+                                            <td>
+                                                <select>
+                                                    <option>学生</option>
+                                                    <option>医生</option>
+                                                    <option>老师</option>
+                                                    <option>娱乐业</option>
+                                                    <option>餐饮业</option>
+                                                </select>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>常用邮箱</td>
+                                            <td><input type="text"></td>
+                                        </tr>
+                                        <tr>
+                                            <td>个性签名</td>
+                                            <td><input type="text"></td>
+                                        </tr>
+                                        <tr>
+                                            <td>个人介绍</td>
+                                            <td><textarea style="resize: none"></textarea></td>
+                                        </tr>
+                                    </table>
+                                </div>
+                            </form>
+                            <div class="changeImg">
+                                <div class="row">
+                                    <div class="col-lg-3">
+                                    <img src="image/touxiang.jpg">
+                                    </div>
+                                    <div class="col-lg-9">
+                                        <input type="file" node>
+                                        <p>请选择jpg、gif格式，小于2M的图片（使用高质量图片，可生成高清头像）</p>
+                                        <button class="btn btn-warning">保存</button>
+                                    </div>
+                                    <!--<div class="col-lg-2"></div>-->
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-1"></div>
+                    </div>
+                </div>
+                <div></div>
+            </div>
+
+        </div>
+        <div class="col-lg-1"></div>
+    </div>
+</div>
+<div class="form_check" style="left:500px;top:100px;width: 350px;position: fixed;display: none;z-index: 10001">
+    <ul class="nav nav-tabs nav-tabs-justified" id="form_login">
+        <li style="width: 175px" class="active"><a href="#a" data-toggle="tab">登录</a></li>
+        <li style="width: 175px"><a href="#b" class="dropdown-toggle" data-toggle="tab">注册</a></li>
+    </ul>
+    <ul class="tab-content" >
+        <li id="a" class="tab-pane active fade in">
+            <form class="form-horizontal">
+                <div class="form-group">
+                    <input type="text" class="form-control" id="user_phone" placeholder="输入用户名或者手机号">
+                </div>
+                <div class="form-group">
+                    <input type="password" class="form-control" id="password" placeholder="输入6-16位密码">
+                </div>
+                <div class="form-group" >
+                    <div class="checkbox col-lg-5" style="padding: 0">
+                        <label>
+                            <input type="checkbox"/><span style="color:gray">记住我</span>
+                        </label>
+                    </div>
+                    <a href="#" class="col-lg-3 col-lg-offset-4" style="padding: 0;margin-right: 0">忘记密码</a>
+                </div>
+                <div class="form-group">
+                    <button style="width: 100%" type="submit" class="btn btn-primary">登录</button>
+                </div>
+                <div class="form-group" style="margin: 0;">
+                    <div class="pull-right">
+                        <span style="color:gray">其他登录方式：</span>
+                        <img src="image/QQ.jpg" style="width: 30px;">
+                        <img src="image/wechat.jpg" style="width: 30px">
+                    </div>
+                </div>
+            </form>
+        </li>
+        <li id="b" class="tab-pane fade">
+            <form class="form-horizontal">
+                <div class="form-group">
+                    <input type="text" class="form-control" id="username" placeholder="输入注册用户名">
+                </div>
+                <div class="form-group">
+                    <input type="text" class="form-control" id="phone_email" placeholder="输入手机号/邮箱">
+                </div>
+                <div class="form-group">
+                    <input type="password" class="form-control" id="password_1"  placeholder="输入6-16位密码">
+                </div>
+                <div class="form-group" >
+                    <input type="password" class="form-control" id="ensurepassword" placeholder="确认密码">
+                </div>
+                <div class="form-group">
+                    <button style="width: 100%" type="submit" class="btn btn-primary">注册</button>
+                </div>
+            </form>
+        </li>
+    </ul>
+    <div id="check_one" class="checkError"></div>
+    <div id="check_two" class="checkError"></div>
+    <div id="check_three" class="checkError"></div>
+    <div id="check_four" class="checkError"></div>
+    <div id="corner_one" class="small_corner"></div>
+    <div id="corner_two" class="small_corner"></div>
+    <div id="corner_three" class="small_corner"></div>
+    <div id="corner_four" class="small_corner"></div>
+
+    <span id="close" style="font-size:20px;position: absolute;right: -50px;top:-50px;color:white;cursor: pointer">X</span>
+
+</div>
+<div class="shade"></div>
+</body>
+<script src="lib/jquery/jquery-1.10.1.min.js"></script>
+<script src="lib/jquery/jquery.pageBar.js"></script>
+<script src="lib/bootstrap/js/bootstrap.js"></script>
+<script>
+    $('#setting>li>span').on('click',function () {
+        $(this).siblings().slideToggle();
+    });
+
+    $(".fadechange li").on('click',function () {
+        $(".fadechange li").css('background-color','white').css('color','gray');
+        $('.set_content_right form').css('display','none');
+        $('.changeImg').css('display','none');
+        $(this).css('background-color','#EFF2F4').css('color','black');
+        $('#set_title').text('设置中心');
+        if($(this).text() == "基本资料"){
+            $('.set_content_right form').css('display','block');
+            $('#set_title').text('修改基本资料');
+        }
+        if($(this).text() == "更换头像"){
+            $('.changeImg').css('display','block');
+            $('#set_title').text('更换头像');
+        }
+    });
+
+    var now=null;
+    $("#login").on('click',function () {
+        $(".shade").css("display","block");
+        $(".form_check").css("display","block");
+    });
+
+    $("#form_login li").on('click',function () {
+        $(".checkError").text("");
+        $(".checkError").removeClass("showError");
+        $(".small_corner").removeClass("showCorner");
+    })
+
+    //登录验证
+    $("#user_phone").blur(function () {
+        // checkUser();
+        var phone = "^(\\+86|86)?1((3[0-9])|(4[5|7])|(5([0-3]|[5-9]))|(8[0,5-9]))\\d{8}$";//验证手机号
+        var value = $("#user_phone").val();
+        if(value ==""){
+            $("#check_one").text("用户名不能为空！").addClass(" showError");
+            $("#corner_one").addClass(" showCorner");
+        }else if(!(value.match(phone))){
+            $("#check_one").text("请输入正确的手机号格式！").addClass(" showError");
+            $("#corner_one").addClass(" showCorner");
+        }
+    });
+    $("#password").blur(function () {
+        // alert("haha")
+        // checkPassword();
+        var pw = "^[^ ]{6,16}$"; //验证密码
+        var value2 = $("#password").val();
+        if(value2 == ""){
+            $("#check_two").text("密码不能为空！").addClass(" showError");
+            $("#corner_two").addClass(" showCorner");
+        }else if(!value2.match(pw)){
+            $("#check_two").text("请输入正确的密码格式！").addClass(" showError");
+            $("#corner_two").addClass(" showCorner");
+        }
+    });
+    $("#user_phone").focus(function () {
+        $("#check_one").removeClass("showError");
+        $("#corner_one").removeClass("showCorner");
+    });
+    $("#password").focus(function () {
+        $("#check_two").removeClass("showError");
+        $("#corner_two").removeClass("showCorner");
+    });
+    //注册验证
+    $("#phone_email").blur(function () {
+        // checkUser();
+        var phone = "^(\\+86|86)?1((3[0-9])|(4[5|7])|(5([0-3]|[5-9]))|(8[0,5-9]))\\d{8}$";//验证手机号
+        var email= /^[\w-]+@([\w-]+\.)+[a-zA-Z]{2,4}$/ ; //验证email;
+        var value = $("#phone_email").val();
+        if(value ==""){
+            $("#check_two").text("不能为空！").addClass(" showError");
+            $("#corner_two").addClass(" showCorner");
+        }else if(!(value.match(phone) || value.match(email))){
+            $("#check_two").text("请输入正确的手机号/邮箱格式！").addClass(" showError");
+            $("#corner_two").addClass(" showCorner");
+        }
+    });
+
+    $("#password_1").blur(function () {
+        // alert("haha")
+        // checkPassword();
+        var pw = "^[^ ]{6,16}$"; //验证密码
+        var value2 = $("#password_1").val();
+        if(value2 == ""){
+            $("#check_three").text("密码不能为空！").addClass(" showError");
+            $("#corner_three").addClass(" showCorner");;
+        }else if(!value2.match(pw)){
+            $("#check_three").text("请输入正确的密码格式！").addClass(" showError");
+            $("#corner_three").addClass(" showCorner");;
+        }
+    });
+
+    $("#ensurepassword").blur(function () {
+        //ensurePassW();
+        var passwordValue = $("#password_1").val();
+        var passwordEnsureValue = $("#ensurepassword").val();
+        if(passwordEnsureValue == ""){
+            $("#check_four").text("请在次填写密码！").addClass(" showError");
+            $("#corner_four").addClass(" showCorner");;
+        }else if(passwordEnsureValue != passwordValue){
+            $("#check_four").text("两次密码输入不一致！").addClass(" showError");
+            $("#corner_four").addClass(" showCorner");
+        }
+    });
+    $("#phone_email").focus(function () {
+        $("#check_two").removeClass("showError");
+        $("#corner_two").removeClass("showCorner");
+    });
+    $("#password_1").focus(function () {
+        $("#check_three").removeClass("showError");
+        $("#corner_three").removeClass("showCorner");
+    });
+    $("#ensurepassword").focus(function () {
+        $("#check_four").removeClass("showError");
+        $("#corner_four").removeClass("showCorner");
+    });
+
+    $("#close").on('click',function () {
+        $(".shade").css("display","none");
+        $(".form_check").css("display","none");
+        $(".checkError").text("");
+        $(".checkError").removeClass("showError");
+        $(".small_corner").removeClass("showCorner");
+
+    })
+</script>
+</html>
